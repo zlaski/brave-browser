@@ -2,13 +2,13 @@
   "name": "brave",
   "version": "1.69.84",
   "description": "Next generation Brave browser for macOS, Windows, Linux, and Android",
-  "homepage": "https://github.com/brave/brave-browser#readme",
+  "homepage": "https://github.com/zlaski/brave-browser#readme",
   "bugs": {
-    "url": "https://github.com/brave/brave-browser/issues"
+    "url": "https://github.com/zlaski/brave-browser/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/brave/brave-browser.git"
+    "url": "git+https://github.com/zlaski/brave-browser.git"
   },
   "license": "MPL-2.0",
   "author": {
@@ -43,7 +43,7 @@
         "dir": "src/brave",
         "branch": "master",
         "repository": {
-          "url": "https://github.com/brave/brave-core.git"
+          "url": "https://github.com/zlaski/brave-core.git"
         }
       }
     }
