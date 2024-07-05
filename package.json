@@ -49,6 +49,7 @@
     }
   },
   "dependencies": {
+    "@types/webtorrent": "^0.109.8",
     "chalk": "4.1.2"
   }
 }
