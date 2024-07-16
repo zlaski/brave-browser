@@ -44,5 +44,8 @@ npm install
 npm run init
 %CHKERR%
 
+npm run build
+%CHKERR%
+
 :end_of_script
 popd
