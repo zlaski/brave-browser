@@ -117,5 +117,44 @@
     <None Include="src\brave\components\brave_webtorrent\extension\constants\webtorrentState.ts">
       <Filter>Source Files\webtorrent</Filter>
     </None>
+    <None Include="src\brave\node_modules\%40brave\brave-ui\theme\brave-default.d.ts" />
+    <None Include="src\brave\node_modules\%40brave\brave-ui\theme\brave-default.js" />
+    <None Include="src\brave\node_modules\%40brave\brave-ui\theme\brave-default.js.map" />
+    <None Include="src\brave\node_modules\%40brave\brave-ui\theme\theme-interface.d.ts" />
+    <None Include="src\brave\node_modules\%40brave\brave-ui\theme\theme-interface.js" />
+    <None Include="src\brave\node_modules\%40brave\brave-ui\theme\theme-interface.js.map" />
+    <None Include="src\brave\node_modules\immediate-chunk-store\index.js" />
+    <None Include="src\brave\node_modules\immediate-chunk-store\README.md" />
+    <None Include="src\brave\node_modules\webtorrent\lib\torrent.js" />
+    <None Include="src\brave\node_modules\webtorrent\lib\webconn.js" />
+    <None Include="src\brave\node_modules\webtorrent\package.json" />
+    <None Include="src\brave\node_modules\webtorrent\webtorrent.min.js" />
+    <None Include="src\brave\node_modules\webtorrent\webtorrent.min.uglier.js" />
+    <None Include="src\out\Component\gen\brave\web-ui-brave_webtorrent\brave_webtorrent_background.bundle.js" />
+    <None Include="build-brave.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="build-chromium.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="node_modules\%40types\node\zlib.d.ts">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="gn-options.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="interesting-searches.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\android_webview\browser\aw_browser_context.cc">
+      <Filter>Source Files\webtorrent</Filter>
+    </ClCompile>
+    <ClCompile Include="src\android_webview\common\aw_features.cc">
+      <Filter>Source Files\webtorrent</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

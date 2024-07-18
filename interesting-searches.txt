@@ -1,0 +1,17 @@
+.\gn-options.txt
+.\.cipd\pkgs\10\YVMEerAL6YU2MOW9q5zT6OIta7Vo36SbJEF7UbegqPIC\.cipdpkg\manifest.json
+.\.git\modules\src\brave\index
+.\node_modules\@types\node\process.d.ts
+.\node_modules\@types\node\zlib.d.ts
+.\src\.vpython3
+.\src\.git\index
+.\src\android_webview\BUILD.gn
+.\src\android_webview\browser\aw_browser_context.cc
+.\src\android_webview\common\aw_features.cc
+.\src\android_webview\java\src\org\chromium\android_webview\common\ProductionSupportedFlagList.java
+.\src\ash\login\resources\BUILD.gn
+.\src\ash\login\resources\login_resources.grd
+.\src\ash\webui\media_app_ui\resources\media_app_resources.grd
+.\src\ash\webui\media_app_ui\resources\mock\media_app_bundle_mock_resources.grd
+.\src\ash\webui\projector_app\resources\mock\projector_app_bundle_mock_resources.grd
+.\src\ash\webui\resources\BUILD.gn

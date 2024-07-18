@@ -127,6 +127,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <None Include="build-brave.bat" />
+    <None Include="build-chromium.bat" />
+    <None Include="node_modules\%40types\node\zlib.d.ts" />
     <None Include="src\brave\components\brave_webtorrent\extension\actions\tab_actions.ts" />
     <None Include="src\brave\components\brave_webtorrent\extension\actions\webtorrent_actions.ts" />
     <None Include="src\brave\components\brave_webtorrent\extension\assets\locale.ts" />
@@ -165,6 +168,22 @@
     <None Include="src\brave\node_modules\%40brave\brave-ui\theme\theme-interface.d.ts" />
     <None Include="src\brave\node_modules\%40brave\brave-ui\theme\theme-interface.js" />
     <None Include="src\brave\node_modules\%40brave\brave-ui\theme\theme-interface.js.map" />
+    <None Include="src\brave\node_modules\immediate-chunk-store\index.js" />
+    <None Include="src\brave\node_modules\immediate-chunk-store\README.md" />
+    <None Include="src\brave\node_modules\webtorrent\lib\torrent.js" />
+    <None Include="src\brave\node_modules\webtorrent\lib\webconn.js" />
+    <None Include="src\brave\node_modules\webtorrent\package.json" />
+    <None Include="src\brave\node_modules\webtorrent\webtorrent.min.js" />
+    <None Include="src\brave\node_modules\webtorrent\webtorrent.min.uglier.js" />
+    <None Include="src\out\Component\gen\brave\web-ui-brave_webtorrent\brave_webtorrent_background.bundle.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="gn-options.txt" />
+    <Text Include="interesting-searches.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\android_webview\browser\aw_browser_context.cc" />
+    <ClCompile Include="src\android_webview\common\aw_features.cc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
