@@ -11,7 +11,7 @@ set "PATH=%CD%\depot_tools;%PATH%"
 set DEPOT_TOOLS_WIN_TOOLCHAIN=0
 set "vs2022_install=C:\Program Files\Microsoft Visual Studio\2022\Community"
 
-cd /d "%~dp0src\brave"
+cd /d "%~dp0"
 
 :: THIS BATCH FILE IS PART OF THE brave-browser CHECKOUT
 :: THERE IS NO NEED TO CHECK OUT brave-core
