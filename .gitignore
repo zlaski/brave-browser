@@ -34,3 +34,5 @@ network-audit-results.json
 
 .npmrc
 /.vs
+depot_tools.zip
+/depot_tools
