@@ -21,6 +21,7 @@ rmdir /s /q src
 rmdir /s /q node_modules
 rmdir /s /q chromium
 rm -rf _gclient*
+npm cache clean --force
 @echo off
 
 touch .gitmodules
