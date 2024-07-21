@@ -12,16 +12,14 @@ echo.
 
 cd /d "%~dp0"
 
-del .gitmodules
-
 @echo on
+del .gitmodules
 del depot_tools.zip
-rmdir /s /q depot_tools
-rmdir /s /q src
-rmdir /s /q node_modules
-rmdir /s /q chromium
+rm -rf depot_tools
+rm -rf src
+rm -rf node_modules
+rm -rf chromium
 rm -rf _gclient*
-npm cache clean --force
 @echo off
 
 touch .gitmodules
@@ -30,12 +28,13 @@ mkdir src
 
 @echo on
 git submodule add -f https://github.com/zlaski/brave-core.git src\brave
-call npm install @types/webtorrent
-@echo on
-call npm install --verbose
+@echo off
+
 @echo on
 curl -o depot_tools.zip https://storage.googleapis.com/chrome-infra/depot_tools.zip
 unzip depot_tools.zip -d depot_tools
+ren depot_tools\git.bat git-disabled.bat
+ren depot_tools\python3.bat python3-disabled.bat
 @echo off
 
 set "PATH=%CD%\depot_tools;%PATH%"
@@ -44,16 +43,29 @@ set "vs2022_install=C:\Program Files\Microsoft Visual Studio\2022\Community"
 
 @echo on
 call gclient
+@echo off
 
-ren depot_tools\git.bat git-disabled.bat
-:: ren depot_tools\python3.bat python3-disabled.bat
 @echo on
+call npm install @types/webtorrent
+call npm install
+@echo off
+
+pushd src\brave
+
+@echo on
+:: call npm install storybook@8.2.5
+call npm install --force --legacy-peer-deps
+@echo off
+
+popd
+
+
+
 git config --global user.name "Ziemowit Łąski"
 git config --global user.email "zlaski@ziemas.net"
 git config --global core.autocrlf false
 git config --global branch.autosetuprebase always
 git config --global core.longpaths true
-@echo off
 
 goto :eof
 

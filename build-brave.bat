@@ -23,7 +23,6 @@ cd /d "%~dp0src\brave"
 
 
 @echo on
-call npm install
 call npm run init
 call npm run build
 @echo off
