@@ -33,6 +33,7 @@ network_log.json
 network-audit-results.json
 
 .npmrc
+.gcs_entries
 /.vs
 depot_tools.zip
 /depot_tools
