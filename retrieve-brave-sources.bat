@@ -32,9 +32,7 @@ git submodule add -f https://github.com/zlaski/brave-core.git src\brave
 
 @echo on
 curl -o depot_tools.zip https://storage.googleapis.com/chrome-infra/depot_tools.zip
-unzip depot_tools.zip -d depot_tools
-ren depot_tools\git.bat git-disabled.bat
-ren depot_tools\python3.bat python3-disabled.bat
+unzip -q depot_tools.zip -d depot_tools
 @echo off
 
 set "PATH=%CD%\depot_tools;%PATH%"
@@ -43,23 +41,23 @@ set "vs2022_install=C:\Program Files\Microsoft Visual Studio\2022\Community"
 
 @echo on
 call gclient
+ren depot_tools\git.bat git-disabled.bat
+ren depot_tools\python3.bat python3-disabled.bat
 @echo off
 
 @echo on
-call npm install @types/webtorrent
-call npm install
+:: call npm install @types/webtorrent
+call npm install --force
 @echo off
 
 pushd src\brave
 
 @echo on
 :: call npm install storybook@8.2.5
-call npm install --force --legacy-peer-deps
+call npm install --force 
 @echo off
 
 popd
-
-
 
 git config --global user.name "Ziemowit Łąski"
 git config --global user.email "zlaski@ziemas.net"
