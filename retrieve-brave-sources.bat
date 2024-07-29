@@ -10,17 +10,24 @@ echo %RED%This will nuke existing sources^^!  Press ^^^^C to exit.%DEFAULT%
 pause
 echo.
 
+@echo off
+npm install -g --no-audit --no-fund --force typescript
+npm install -g --no-audit --no-fund --force in-publish
+npm install -g --no-audit --no-fund --force rollup
+npm install -g --no-audit --no-fund --force tsconfig
+@echo on
+
 cd /d "%~dp0"
 
 @echo on
 del .gitmodules
 del .gcs*
 del depot_tools.zip
-rm -rf depot_tools
-rm -rf src
-rm -rf node_modules
-rm -rf chromium
-rm -rf _gclient*
+rm -rf depot_tools || exit /b 10
+rm -rf src || exit /b 11
+rm -rf node_modules || exit /b 12
+rm -rf chromium || exit /b 13
+rm -rf _gclient* || exit /b 14
 @echo off
 
 touch .gitmodules
@@ -29,6 +36,10 @@ mkdir src
 
 @echo on
 git submodule add -f https://github.com/zlaski/brave-core.git src\brave
+pushd src\brave
+call npm install
+popd
+call npm install
 @echo off
 
 goto :eof
