@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zlaski/brave-browser.git"
+    "url": "https://github.com/zlaski/brave-browser.git"
   },
   "license": "MPL-2.0",
   "author": {
@@ -49,6 +49,8 @@
     }
   },
   "dependencies": {
-    "chalk": "4.1.2"
+    "chalk": "^4.1.2",
+    "commander": "^12.1.0",
+    "fs-extra": "^11.2.0"
   }
 }
