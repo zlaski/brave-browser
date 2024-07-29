@@ -25,6 +25,7 @@ cd /d "%~dp0src\brave"
 @echo on
 call npm run init
 call npm run build
+call npm run create_dist
 @echo off
 
 popd

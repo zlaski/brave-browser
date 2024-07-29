@@ -14,6 +14,7 @@ cd /d "%~dp0"
 
 @echo on
 del .gitmodules
+del .gcs*
 del depot_tools.zip
 rm -rf depot_tools
 rm -rf src
@@ -29,6 +30,8 @@ mkdir src
 @echo on
 git submodule add -f https://github.com/zlaski/brave-core.git src\brave
 @echo off
+
+goto :eof
 
 @echo on
 curl -o depot_tools.zip https://storage.googleapis.com/chrome-infra/depot_tools.zip
