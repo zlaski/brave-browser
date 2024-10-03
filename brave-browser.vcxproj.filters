@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\webtorrent">
+      <UniqueIdentifier>{e6fbef4c-273f-47cb-aecb-7d296da21ac0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\brave-ui">
+      <UniqueIdentifier>{07632b46-45e7-4f1a-a612-1f22d3343a64}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\brave\components\brave_webtorrent\extension\brave_webtorrent.tsx">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\background.ts">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\brave_webtorrent.html">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\brave_webtorrent2.html">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\manifest.json">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\utils\fileType.ts">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\actions\tab_actions.ts">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\actions\webtorrent_actions.ts">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\assets\locale.ts">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\background\store.ts">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\background\webtorrent.ts">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\background\actions\tabActions.ts">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\background\actions\webtorrentActions.ts">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\background\api\torrent_api.ts">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\background\events\tabsEvents.ts">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\background\events\torrentEvents.ts">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\background\events\webtorrentEvents.ts">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\background\reducers\index.ts">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\background\reducers\webtorrent_reducer.ts">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\components\app.tsx">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\components\header.tsx">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\components\link.tsx">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\components\mediaViewer.tsx">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\components\spinner.tsx">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\components\torrentFileList.tsx">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\components\torrentStatus.tsx">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\components\torrentViewer.tsx">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\components\torrentViewerFooter.tsx">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\components\torrentViewerHeader.tsx">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\constants\tab_types.ts">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\constants\webtorrent_types.ts">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\components\brave_webtorrent\extension\constants\webtorrentState.ts">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+    <None Include="src\brave\node_modules\%40brave\brave-ui\theme\brave-default.d.ts" />
+    <None Include="src\brave\node_modules\%40brave\brave-ui\theme\brave-default.js" />
+    <None Include="src\brave\node_modules\%40brave\brave-ui\theme\brave-default.js.map" />
+    <None Include="src\brave\node_modules\%40brave\brave-ui\theme\theme-interface.d.ts" />
+    <None Include="src\brave\node_modules\%40brave\brave-ui\theme\theme-interface.js" />
+    <None Include="src\brave\node_modules\%40brave\brave-ui\theme\theme-interface.js.map" />
+    <None Include="src\brave\node_modules\immediate-chunk-store\index.js" />
+    <None Include="src\brave\node_modules\immediate-chunk-store\README.md" />
+    <None Include="src\brave\node_modules\webtorrent\lib\torrent.js" />
+    <None Include="src\brave\node_modules\webtorrent\lib\webconn.js" />
+    <None Include="src\brave\node_modules\webtorrent\package.json" />
+    <None Include="src\brave\node_modules\webtorrent\webtorrent.min.js" />
+    <None Include="src\brave\node_modules\webtorrent\webtorrent.min.uglier.js" />
+    <None Include="src\out\Component\gen\brave\web-ui-brave_webtorrent\brave_webtorrent_background.bundle.js" />
+    <None Include="build-brave.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="build-chromium.bat">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="node_modules\%40types\node\zlib.d.ts">
+      <Filter>Source Files\webtorrent</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="gn-options.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="interesting-searches.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\android_webview\browser\aw_browser_context.cc">
+      <Filter>Source Files\webtorrent</Filter>
+    </ClCompile>
+    <ClCompile Include="src\android_webview\common\aw_features.cc">
+      <Filter>Source Files\webtorrent</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{1d40d723-6a9d-42f3-8ef3-95c56e4bf4b8}</ProjectGuid>
+    <RootNamespace>bravebrowser</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="build-brave.bat" />
+    <None Include="build-chromium.bat" />
+    <None Include="node_modules\%40types\node\zlib.d.ts" />
+    <None Include="src\brave\components\brave_webtorrent\extension\actions\tab_actions.ts" />
+    <None Include="src\brave\components\brave_webtorrent\extension\actions\webtorrent_actions.ts" />
+    <None Include="src\brave\components\brave_webtorrent\extension\assets\locale.ts" />
+    <None Include="src\brave\components\brave_webtorrent\extension\background.ts" />
+    <None Include="src\brave\components\brave_webtorrent\extension\background\actions\tabActions.ts" />
+    <None Include="src\brave\components\brave_webtorrent\extension\background\actions\webtorrentActions.ts" />
+    <None Include="src\brave\components\brave_webtorrent\extension\background\api\torrent_api.ts" />
+    <None Include="src\brave\components\brave_webtorrent\extension\background\events\tabsEvents.ts" />
+    <None Include="src\brave\components\brave_webtorrent\extension\background\events\torrentEvents.ts" />
+    <None Include="src\brave\components\brave_webtorrent\extension\background\events\webtorrentEvents.ts" />
+    <None Include="src\brave\components\brave_webtorrent\extension\background\reducers\index.ts" />
+    <None Include="src\brave\components\brave_webtorrent\extension\background\reducers\webtorrent_reducer.ts" />
+    <None Include="src\brave\components\brave_webtorrent\extension\background\store.ts" />
+    <None Include="src\brave\components\brave_webtorrent\extension\background\webtorrent.ts" />
+    <None Include="src\brave\components\brave_webtorrent\extension\brave_webtorrent.html" />
+    <None Include="src\brave\components\brave_webtorrent\extension\brave_webtorrent.tsx" />
+    <None Include="src\brave\components\brave_webtorrent\extension\brave_webtorrent2.html" />
+    <None Include="src\brave\components\brave_webtorrent\extension\components\app.tsx" />
+    <None Include="src\brave\components\brave_webtorrent\extension\components\header.tsx" />
+    <None Include="src\brave\components\brave_webtorrent\extension\components\link.tsx" />
+    <None Include="src\brave\components\brave_webtorrent\extension\components\mediaViewer.tsx" />
+    <None Include="src\brave\components\brave_webtorrent\extension\components\spinner.tsx" />
+    <None Include="src\brave\components\brave_webtorrent\extension\components\torrentFileList.tsx" />
+    <None Include="src\brave\components\brave_webtorrent\extension\components\torrentStatus.tsx" />
+    <None Include="src\brave\components\brave_webtorrent\extension\components\torrentViewer.tsx" />
+    <None Include="src\brave\components\brave_webtorrent\extension\components\torrentViewerFooter.tsx" />
+    <None Include="src\brave\components\brave_webtorrent\extension\components\torrentViewerHeader.tsx" />
+    <None Include="src\brave\components\brave_webtorrent\extension\constants\tab_types.ts" />
+    <None Include="src\brave\components\brave_webtorrent\extension\constants\webtorrentState.ts" />
+    <None Include="src\brave\components\brave_webtorrent\extension\constants\webtorrent_types.ts" />
+    <None Include="src\brave\components\brave_webtorrent\extension\manifest.json" />
+    <None Include="src\brave\components\brave_webtorrent\extension\utils\fileType.ts" />
+    <None Include="src\brave\node_modules\%40brave\brave-ui\theme\brave-default.d.ts" />
+    <None Include="src\brave\node_modules\%40brave\brave-ui\theme\brave-default.js" />
+    <None Include="src\brave\node_modules\%40brave\brave-ui\theme\brave-default.js.map" />
+    <None Include="src\brave\node_modules\%40brave\brave-ui\theme\theme-interface.d.ts" />
+    <None Include="src\brave\node_modules\%40brave\brave-ui\theme\theme-interface.js" />
+    <None Include="src\brave\node_modules\%40brave\brave-ui\theme\theme-interface.js.map" />
+    <None Include="src\brave\node_modules\immediate-chunk-store\index.js" />
+    <None Include="src\brave\node_modules\immediate-chunk-store\README.md" />
+    <None Include="src\brave\node_modules\webtorrent\lib\torrent.js" />
+    <None Include="src\brave\node_modules\webtorrent\lib\webconn.js" />
+    <None Include="src\brave\node_modules\webtorrent\package.json" />
+    <None Include="src\brave\node_modules\webtorrent\webtorrent.min.js" />
+    <None Include="src\brave\node_modules\webtorrent\webtorrent.min.uglier.js" />
+    <None Include="src\out\Component\gen\brave\web-ui-brave_webtorrent\brave_webtorrent_background.bundle.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="gn-options.txt" />
+    <Text Include="interesting-searches.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\android_webview\browser\aw_browser_context.cc" />
+    <ClCompile Include="src\android_webview\common\aw_features.cc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
