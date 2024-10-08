@@ -19,18 +19,39 @@ echo.
 
 pushd "%~dp0"
 
+_r rmdir /s /q src
+_r mkdir src
+echo gitkeep >src\.gitkeep
+
 :: install assorted node.js goo
 _r -n npm install --no-audit --no-fund --force chalk
 cd src\brave
+if errorlevel 1 goto :eof
 _r npm install --no-audit --no-fund --force
+if errorlevel 1 goto :eof
+
+pushd components\brave_wallet\browser\zcash\rust\librustzcash\src
+git restore .
+popd
+
+pushd third_party\bip39wally-core-native
+git restore .
+popd
+
+pushd third_party\reclient_configs\src
+git restore .
+popd
+
 cd ..\..
 pause
 
 :: the 'init' step installs brave-core
-call :run_step init
+::call :run_step init
 
 :: the 'sync' step installs depot_tools and chromium,
 :: some apache stuff, etc.
+SET "RBE_service=remotebuildexecution.googleapis.com:443"
+
 call :run_step sync
 
 call :run_step build
