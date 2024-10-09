@@ -1,6 +1,6 @@
 {
   "name": "brave",
-  "version": "1.77.26",
+  "version": "1.76.6",
   "description": "Next generation Brave browser for macOS, Windows, Linux, and Android",
   "homepage": "https://github.com/brave/brave-browser#readme",
   "bugs": {
@@ -38,7 +38,7 @@
     "versions": "cd src/brave && npm run versions --"
   },
   "engines": {
-    "node": ">=20.0.0 <22.0.0",
+    "node": ">=20.0.0 <23.0.0",
     "npm": ">=10.0.0"
   },
   "config": {
@@ -47,14 +47,18 @@
         "dir": "src/brave",
         "branch": "hybrid-chunk-store",
         "repository": {
-          "url": "https://github.com/zlaski/brave-core.git"
+          "url": "https://github.com/zlaski/brave-core.git#hybrid-chunk-store"
         }
       }
     }
   },
   "dependencies": {
-    "chalk": "^4.1.2",
+    "chalk": "4.1.2",
+    "commander": "2.20.3",
+    "dotenv": "16.3.1",
+    "fs-extra": "8.1.0",
+    "jsdom": "25.0.1",
     "log-update": "3.4.0",
-    "semver": "^7.6.3"
+    "semver": "7.6.2"
   }
 }
