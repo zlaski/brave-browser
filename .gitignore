@@ -34,3 +34,4 @@ network-audit-results.json
 
 .npmrc
 .gcs_entries
+package-lock.json
