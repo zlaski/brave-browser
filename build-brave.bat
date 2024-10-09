@@ -19,46 +19,37 @@ echo.
 
 pushd "%~dp0"
 
+_r -n -q del package-lock.json
+_r rmdir /s /q node_modules
 _r rmdir /s /q src
 _r mkdir src
 echo gitkeep >src\.gitkeep
 
-:: install assorted node.js goo
-_r -n npm install --no-audit --no-fund --force chalk
-cd src\brave
+set NODE_ENV=production
+
+:: Install dependencies
+_r npm install --production=false
 if errorlevel 1 goto :eof
-_r npm install --no-audit --no-fund --force
-if errorlevel 1 goto :eof
 
-pushd components\brave_wallet\browser\zcash\rust\librustzcash\src
-git restore .
-popd
-
-pushd third_party\bip39wally-core-native
-git restore .
-popd
-
-pushd third_party\reclient_configs\src
-git restore .
-popd
-
-cd ..\..
-pause
+SET "RBE_service=remotebuildexecution.googleapis.com:443"
 
 :: the 'init' step installs brave-core
-::call :run_step init
+_r npm run init
+if errorlevel 1 goto :eof
 
 :: the 'sync' step installs depot_tools and chromium,
 :: some apache stuff, etc.
-SET "RBE_service=remotebuildexecution.googleapis.com:443"
+_r npm run sync
+if errorlevel 1 goto :eof
 
-call :run_step sync
+_r npm run build
+if errorlevel 1 goto :eof
 
-call :run_step build
+_r npm run create_dist
+if errorlevel 1 goto :eof
 
-call :run_step create_dist
-
-call :run_step start
+_r npm run start
+if errorlevel 1 goto :eof
 
 popd
 goto :eof
@@ -67,6 +58,5 @@ goto :eof
 
 :run_step
 echo %YELLOW%About to 'npm run %1'%DEFAULT%
-pause
 _r npm run %1
-exit /b 0
+exit /b %ERRORLEVEL%
