@@ -28,12 +28,7 @@ if (process.platform === 'win32') {
   npmCommand += '.cmd'
 }
 
-<<<<<<< Updated upstream
 util.run(npmCommand, ['install'], { cwd: braveCoreDir })
-=======
-Log.progress(`Performing "npm install --production=false" on ${braveCoreDir}`)
-util.run(npmCommand, ['install', '--production=false'], { cwd: braveCoreDir, continueOnFail: true })
->>>>>>> Stashed changes
 
 util.run(npmCommand, ['run', 'sync' ,'--', '--init'].concat(process.argv.slice(2)), {
   cwd: braveCoreDir,
