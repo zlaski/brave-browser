@@ -20,22 +20,19 @@ echo.
 pushd "%~dp0"
 
 _r -n -q del package-lock.json
-_r rmdir /s /q node_modules
-_r rmdir /s /q src
+_r -q rmdir /s /q node_modules
+_r -q rmdir /s /q src
 _r mkdir src
 echo gitkeep >src\.gitkeep
 
-set NODE_ENV=production
-
 :: Install dependencies
-_r npm install --production=false
+_r npm install --force --no-fund
 if errorlevel 1 goto :eof
 
 SET "RBE_service=remotebuildexecution.googleapis.com:443"
 
 :: the 'init' step installs brave-core
-_r npm run init
-if errorlevel 1 goto :eof
+_r -q npm run init
 
 :: the 'sync' step installs depot_tools and chromium,
 :: some apache stuff, etc.
