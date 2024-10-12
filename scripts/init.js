@@ -28,7 +28,7 @@ if (process.platform === 'win32') {
   npmCommand += '.cmd'
 }
 
-util.run(npmCommand, ['install', '--force', '--no-fund'], { cwd: braveCoreDir })
+util.run(npmCommand, ['install', '--force'], { cwd: braveCoreDir })
 
 util.run(npmCommand, ['run', 'sync' ,'--', '--init'].concat(process.argv.slice(2)), {
   cwd: braveCoreDir,
