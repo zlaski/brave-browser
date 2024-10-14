@@ -20,9 +20,11 @@ echo.
 pushd "%~dp0"
 
 _r -n -q del package-lock.json
-_r -q rmdir /s /q node_modules
-_r -q rmdir /s /q src
+if exist _gclient* for /f %%G in ('dir /b _gclient*') do _r -n rmdir /s /q %%G
+_r -n -q rmdir /s /q node_modules
+_r -n -q rmdir /s /q src
 _r mkdir src
+if errorlevel 1 goto :eof
 echo gitkeep >src\.gitkeep
 
 :: Install dependencies
