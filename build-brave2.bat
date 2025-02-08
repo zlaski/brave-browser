@@ -29,31 +29,31 @@ pushd "%~dp0"
 
 echo %GREEN%%SCRIPT%: Building . . .%DEFAULT%
 
-if exist src (
-    pushd src
-    _r -n -q rmdir /s /q out
-    _r git pull --autostash
-    popd
-)
-if not exist src (
-    _r git clone --single-branch --branch=hybrid-chunk-store https://github.com/zlaski/chromium.git src
-    if errorlevel 1 exit /b 11
-)
+REM if exist src (
+    REM pushd src
+    REM _r -n -q rmdir /s /q out
+    REM _r git pull --autostash
+    REM popd
+REM )
+REM if not exist src (
+    REM _r git clone --single-branch --branch=hybrid-chunk-store https://github.com/zlaski/chromium.git src
+    REM if errorlevel 1 exit /b 11
+REM )
 
-if exist src\brave (
-    pushd src\brave
-    _r git pull --autostash
-    popd
-)
-if not exist src\brave (
-    _r git clone --single-branch --branch=hybrid-chunk-store https://github.com/zlaski/brave-core.git src\brave
-    if errorlevel 1 exit /b 11
-)
+REM if exist src\brave (
+    REM pushd src\brave
+    REM _r git pull --autostash
+    REM popd
+REM )
+REM if not exist src\brave (
+    REM _r git clone --single-branch --branch=hybrid-chunk-store https://github.com/zlaski/brave-core.git src\brave
+    REM if errorlevel 1 exit /b 11
+REM )
 
-if not exist src\brave\vendor\depot_tools (
-    _r git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git src\brave\vendor\depot_tools    pushd src\brave\vendor\depot_tools
-    if errorlevel 1 exit /b 11
-)
+REM if not exist src\brave\vendor\depot_tools (
+    REM _r git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git src\brave\vendor\depot_tools    pushd src\brave\vendor\depot_tools
+    REM if errorlevel 1 exit /b 11
+REM )
 
 :: Install dependencies
 echo %PATH%
@@ -61,15 +61,8 @@ _r -n -q rmdir /s /q node_modules
 _r npm install --force --no-fund --no-audit
 pushd src\brave
 _r -n -q rmdir /s /q node_modules
-_r npm install --force --no-fund --no-audit
+_r npm install --force --no-fund --no-audit registry-js
 popd
-
-_r npm install --force --no-fund
-if errorlevel 1 goto :finish_build
-cd src\brave
-_r npm install --force --no-fund
-popd
-if errorlevel 1 goto :finish_build
 
 SET "RBE_service=remotebuildexecution.googleapis.com:443"
 
